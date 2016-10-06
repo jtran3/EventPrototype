@@ -7,17 +7,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.ggc.john.eventprototype.LoginActivity">
+    tools:context="edu.ggc.john.eventprototype.RegisterActivity">
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/eUsername"
+        android:id="@+id/eName"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:hint="Name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eUsername"
+        android:layout_below="@+id/eName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/eName"
+        android:layout_alignEnd="@+id/eName"
         android:hint="Username" />
 
     <EditText
@@ -29,27 +40,45 @@
         android:layout_below="@+id/eUsername"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/eUsername"
-        android:layout_alignEnd="@+id/eUsername"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:hint="Password" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/eLogin"
+        android:text="Regisiter"
+        android:id="@+id/bRegisiter"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/ePhonenumber"
+        android:layout_alignEnd="@+id/ePhonenumber" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/eEmail"
         android:layout_below="@+id/ePassword"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/ePassword"
-        android:layout_alignEnd="@+id/ePassword" />
+        android:layout_alignEnd="@+id/ePassword"
+        android:hint="E-mail" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Register Here"
-        android:id="@+id/tvRegisiterHere"
-        android:layout_below="@+id/eLogin"
-        android:layout_centerHorizontal="true" />
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/ePhonenumber"
+        android:layout_below="@+id/eEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/eEmail"
+        android:layout_alignEnd="@+id/eEmail"
+        android:hint="Phone Number" />
+
 </RelativeLayout>
