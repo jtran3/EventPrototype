@@ -22,7 +22,11 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UserAreaActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".VerificationActivity" />
+        <activity android:name=".CreateEvent" />
+        <activity android:name=".CreateEvent2" />
+        <activity android:name=".CreateEvent3"></activity>
     </application>
 
 </manifest>

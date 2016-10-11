@@ -18,5 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText eEmail = (EditText) findViewById(R.id.eEmail);
         final EditText ePhonenumber = (EditText) findViewById(R.id.ePhonenumber);
         final Button bRegisiter = (Button) findViewById(R.id.bRegisiter);
+
+
     }
 }

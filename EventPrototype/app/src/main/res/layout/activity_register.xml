@@ -53,7 +53,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/ePhonenumber"
-        android:layout_alignEnd="@+id/ePhonenumber" />
+        android:layout_alignEnd="@+id/ePhonenumber"
+        android:clickable="true" />
 
     <EditText
         android:layout_width="wrap_content"
