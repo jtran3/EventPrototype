@@ -1,11 +1,12 @@
 <?php
-    $con = mysqli_connect("eventgo.000webhostapp.com", "a3288368_user", "abcd1234", "a3288368_data");
+    $con = mysqli_connect("mysql11.000webhost.com", "a1087370_Eventgo", "database1", "a1087370_EventGo");
     
     $name = $_POST["name"];
-    $age = $_POST["age"];
+    $email= $_POST["email"];
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $statement = mysqli_prepare($con, "INSERT INTO user (name, username, age, password) VALUES (?, ?, ?, ?)");
+    $phone_number = $_POST["phone_number"];
+    $statement = mysqli_prepare($con, "INSERT INTO user (name, username, email, password, phone_number) VALUES (?, ?, ?, ?, ?)");
     mysqli_stmt_bind_param($statement, "siss", $name, $username, $age, $password);
     mysqli_stmt_execute($statement);
     
