@@ -19,9 +19,10 @@
 		response["name"] = $name;
 		response["email"] = $email;
 		response["password"] = $password;
-		response["username"] = username;
-		response[""]
+		response["username"] = $username;
+		response["phonenumber"] = $phonenumber;
 	}	
+	echo json_encode($response);
 
 
 ?>
