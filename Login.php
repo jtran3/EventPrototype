@@ -8,7 +8,7 @@
 	mysqli_stmt_execute($statement);
 	
 	mysqli_stmt_store_result($statement);
-	mysqli_stmt_bind_result($statement, $userID, $name, $email, $username, $password, $phonenumber);
+	mysqli_stmt_bind_result($statement, $userID, $name, $email, $username, $password);
 	
 	$response = array();
 	$response["success"] = false;
@@ -18,9 +18,9 @@
 		response["success"] = true;
 		response["name"] = $name;
 		response["email"] = $email;
-		response["password"] = $password;
 		response["username"] = $username;
-		response["phonenumber"] = $phonenumber;
+		response["password"] = $password;
+		
 	}	
 	echo json_encode($response);
 

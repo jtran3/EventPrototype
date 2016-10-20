@@ -26,7 +26,6 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText eUsername = (EditText) findViewById(R.id.eUsername);
         final EditText ePassword = (EditText) findViewById(R.id.ePassword);
         final EditText eEmail = (EditText) findViewById(R.id.eEmail);
-        final EditText ePhonenumber = (EditText) findViewById(R.id.ePhonenumber);
         final Button bRegisiter = (Button) findViewById(R.id.bRegisiter);
 
         bRegisiter.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +35,6 @@ public class RegisterActivity extends AppCompatActivity {
                 final String username = eUsername.getText().toString();
                 final String password = ePassword.getText().toString();
                 final String email = eEmail.getText().toString();
-                final int phonenumber = Integer.parseInt(ePhonenumber.getText().toString());
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -67,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 };
 
-                RegisiterRequest regisiterRequest = new RegisiterRequest(name, username, password, email, phonenumber, responseListener);
+                RegisiterRequest regisiterRequest = new RegisiterRequest(name, username, password, email, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(regisiterRequest);
             }

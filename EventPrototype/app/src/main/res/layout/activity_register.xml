@@ -44,18 +44,6 @@
         android:layout_alignParentEnd="true"
         android:hint="Password" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Regisiter"
-        android:id="@+id/bRegisiter"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/ePhonenumber"
-        android:layout_alignEnd="@+id/ePhonenumber"
-        android:clickable="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,17 +57,16 @@
         android:layout_alignEnd="@+id/ePassword"
         android:hint="E-mail" />
 
-    <EditText
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/ePhonenumber"
+        android:text="Regisiter"
+        android:id="@+id/bRegisiter"
+        android:clickable="true"
         android:layout_below="@+id/eEmail"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/eEmail"
-        android:layout_alignEnd="@+id/eEmail"
-        android:hint="Phone Number" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

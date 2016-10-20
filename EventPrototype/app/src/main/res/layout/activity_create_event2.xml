@@ -9,16 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ggc.john.eventprototype.CreateEvent2">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Select Your Guests"
-        android:id="@+id/textView3"
-        android:layout_marginTop="81dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,6 +18,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+<<<<<<< HEAD
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,5 +27,16 @@
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp" />
+=======
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Select Your Guests"
+        android:id="@+id/textView3"
+        android:layout_marginTop="79dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+>>>>>>> 690b43072bcde00b364c90d1fa48028b00e5877b
 
 </RelativeLayout>
