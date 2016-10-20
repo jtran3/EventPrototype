@@ -18,8 +18,9 @@
 		response["success"] = true;
 		response["name"] = $name;
 		response["email"] = $email;
-		response["password"] = $password;
 		response["username"] = $username;
+		response["password"] = $password;
+		
 	}	
 	echo json_encode($response);
 
