@@ -18,6 +18,19 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact List"
+        android:id="@+id/button7"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
+=======
+>>>>>>> 34d3b2506ec0d4a916bbee0ae7edf52a299946ca
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,5 +40,9 @@
         android:layout_marginTop="79dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+<<<<<<< HEAD
+=======
+>>>>>>> 690b43072bcde00b364c90d1fa48028b00e5877b
+>>>>>>> 34d3b2506ec0d4a916bbee0ae7edf52a299946ca
 
 </RelativeLayout>

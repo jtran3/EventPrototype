@@ -18,7 +18,7 @@ public class CreateEvent extends AppCompatActivity {
         yourButton.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v){
-                startActivity(new Intent(CreateEvent.this, CreateEvent2.class));
+                //startActivity(new Intent(CreateEvent.this, CreateEvent2.class));
             }
         });
     }
