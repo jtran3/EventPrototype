@@ -2,3 +2,7 @@
 Tried looking over the code and php again for syntex errors that might make the login not work. Couldn't find any after yesterdays change for now. looked up W/OpenGLRenderer: Failed to set EGL_SWAP_BEHAVIOR on surface 0xaa402ac0, error=EGL_SUCCESS
 to see if it was stopping the code but no luck. reviewed the example over again from https://www.youtube.com/watch?v=lHBfyQgkiAA but no luck. Going to try out create event tomorrow to keep my mind off of it until i can find 
 the answer with login.
+
+10/23/2016
+Looked over the loginRequest and got rid of an error i made in it but the login still doesn't go to the user area. Started looking over how to keep presisent data from android boot camp book and looking at sending a text message from the app with https://www.youtube.com/watch?v=paAjAEOsh2w
+and https://www.youtube.com/watch?v=F73tf7ySAZU for contacts to get a understanding of how to do it.
