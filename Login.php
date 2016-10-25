@@ -1,7 +1,7 @@
 <?php
 	$con = mysqli_connect("mysql11.000webhost.com", "a1087370_Eventgo", "database1", "a1087370_EventGo");
-	$username = $_POST("username");
-	$password = $_POST("password");
+	$username = $_POST["username"];
+	$password = $_POST["password"];
 	
 	$statement = mysqli_prepare($con, "SELECT * FROM user WHERE username = ? AND password = ?");
 	mysqli_stmt_bind_param($statement, "ss", $username, $password);

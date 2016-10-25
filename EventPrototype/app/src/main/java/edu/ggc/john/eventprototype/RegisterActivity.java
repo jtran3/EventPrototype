@@ -15,6 +15,8 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import static java.sql.DriverManager.println;
+
 public class RegisterActivity extends AppCompatActivity {
 
     @Override
@@ -41,6 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onResponse(String response)
                     {
                         try {
+                            System.out.println(response);
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if(success)

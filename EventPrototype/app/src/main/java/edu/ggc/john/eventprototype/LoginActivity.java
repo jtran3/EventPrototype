@@ -2,6 +2,7 @@ package edu.ggc.john.eventprototype;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,10 +34,11 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent regisiterIntent = new Intent(LoginActivity.this, RegisterActivity.class);
                 LoginActivity.this.startActivity(regisiterIntent);
+
             }
         });
-
-        bLogin.setOnClickListener(new View.OnClickListener() {
+        bLogin.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v)
             {
@@ -51,20 +53,20 @@ public class LoginActivity extends AppCompatActivity {
                         {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
-
+                            System.out.println(success);
                             if (success)
                             {
-                                Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
-                                String name = jsonResponse.getString("Name");
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                //String name = jsonResponse.getString("name");
 
 
-                                intent.putExtra("name", name);
-                                intent.putExtra("username", username);
+                                //intent.putExtra("name", name);
+                                //intent.putExtra("username", username);
 
                                 LoginActivity.this.startActivity(intent);
 
                             }
-                                else
+                            else
                             {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                 builder.setMessage("Login failed")
@@ -86,6 +88,5 @@ public class LoginActivity extends AppCompatActivity {
                 queue.add(loginRequest);
             }
         });
-
     }
 }
