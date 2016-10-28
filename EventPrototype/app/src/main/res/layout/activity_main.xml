@@ -29,11 +29,20 @@
         android:layout_marginTop="76dp" />
 
     <Button
+        android:text="Manage Event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:id="@+id/bManageEvents" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Events"
         android:id="@+id/button3"
-        android:layout_marginTop="62dp"
+        android:layout_marginTop="48dp"
         android:layout_below="@+id/button2"
         android:layout_alignRight="@+id/textView2"
         android:layout_alignEnd="@+id/textView2" />

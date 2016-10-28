@@ -12,3 +12,6 @@ Looked over the database to see if the values are right. Created Login2.php in c
 for mysqli_stmt_bind_param was wrong so i corrected it. retry the test and come up with another error which is " org.json.JSONException: Value <br><table of type java.lang.String cannot be converted to JSONObject ".
 10/26/2016 
 was looking over https://www.youtube.com/playlist?list=PL_PaSTBkUwk4PXlhZIe4COpwnWeCRnw2F and https://www.youtube.com/watch?v=g4_1UOFNLEY to understand how to do contacts. Going to ask partner which one to use tomorrow.
+
+10/27/2016
+looked over https://developer.android.com/reference/android/app/ListFragment.html and listview. created managing activity to but the contacts in. using https://www.youtube.com/watch?v=F73tf7ySAZU video for contacts tomorrow.
