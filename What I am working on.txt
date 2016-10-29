@@ -15,3 +15,6 @@ was looking over https://www.youtube.com/playlist?list=PL_PaSTBkUwk4PXlhZIe4COpw
 
 10/27/2016
 looked over https://developer.android.com/reference/android/app/ListFragment.html and listview. created managing activity to but the contacts in. using https://www.youtube.com/watch?v=F73tf7ySAZU video for contacts tomorrow.
+
+10/28/2016
+created item list xml and list view for contacts to to mess around with and looking into implementing contact when I'm sure it doesn't break the app tomorrow.
