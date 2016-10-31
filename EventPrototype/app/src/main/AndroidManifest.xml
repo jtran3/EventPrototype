@@ -71,6 +71,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ManageEvent" />
+        <activity android:name=".Contacts"></activity>
     </application>
 
 </manifest>
