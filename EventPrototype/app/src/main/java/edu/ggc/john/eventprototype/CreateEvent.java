@@ -5,10 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class CreateEvent extends AppCompatActivity
 {
+
+    EditText txtEventName;
+    EditText txtEventDate;
+    EditText txtStartTime;
+    EditText txtEndTime;
+    List<Event> Events = new ArrayList<Event>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,6 +46,23 @@ public class CreateEvent extends AppCompatActivity
             }
         });
 
+
+    }
+
+    public void getData(View v){
+        txtEventName = (EditText) findViewById(R.id.eventName);
+        String eventName = txtEventName.getText().toString();
+
+        txtEventDate = (EditText) findViewById(R.id.eventDate);
+        String eventDate = txtEventDate.getText().toString();
+
+        txtStartTime = (EditText) findViewById(R.id.startTime);
+        String startTime = txtStartTime.getText().toString();
+
+        txtEndTime = (EditText) findViewById(R.id.endTime);
+        String endTime = txtEndTime.getText().toString();
+
+        Event newEvent1 = new Event(eventName, eventDate, startTime, endTime);
 
     }
 }

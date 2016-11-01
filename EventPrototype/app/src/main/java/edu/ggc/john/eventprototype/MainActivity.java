@@ -21,5 +21,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, CreateEvent.class));
             }
         });
+
+        Button yourButton2 = (Button) findViewById(R.id.button3);
+
+        yourButton2.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this, MyEvents.class));
+            }
+        });
     }
 }
