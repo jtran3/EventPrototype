@@ -13,8 +13,10 @@ import android.widget.ListView;
 public class Contacts extends AppCompatActivity
 {
 
-
+    private static final int CONTACT_LOADER_ID = 78;
     private SimpleCursorAdapter adapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,6 +24,10 @@ public class Contacts extends AppCompatActivity
         setupCursorAdapter();
         ListView contactlist = (ListView) findViewById(R.id.contactlist);
         contactlist.setAdapter(adapter);
+        setupCursorAdapter();
+        // Initialize the loader with a special ID and the defined callbacks from above
+        getSupportLoaderManager().initLoader(CONTACT_LOADER_ID,
+                new Bundle(), contactsLoader);
     }
 
     // Create simple cursor adapter to connect the cursor dataset we load with a ListView
@@ -49,9 +55,11 @@ public class Contacts extends AppCompatActivity
                 public Loader<Cursor> onCreateLoader(int id, Bundle args)
                 {
                     // Define the columns to retrieve
-                    String[] projectionFields = new String[] { ContactsContract.Contacts._ID,
+                    String[] projectionFields = new String[]
+                            {ContactsContract.Contacts._ID,
                             ContactsContract.Contacts.DISPLAY_NAME,
-                            ContactsContract.Contacts.PHOTO_URI };
+                            ContactsContract.Contacts.PHOTO_URI
+                            };
                     // Construct the loader
                     CursorLoader cursorLoader = new CursorLoader(Contacts.this,
                             ContactsContract.Contacts.CONTENT_URI, // URI
@@ -67,7 +75,8 @@ public class Contacts extends AppCompatActivity
                 // When the system finishes retrieving the Cursor through the CursorLoader,
                 // a call to the onLoadFinished() method takes place.
                 @Override
-                public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
+                public void onLoadFinished(Loader<Cursor> loader, Cursor cursor)
+                {
                     // The swapCursor() method assigns the new Cursor to the adapter
                     adapter.swapCursor(cursor);
                 }
@@ -76,10 +85,13 @@ public class Contacts extends AppCompatActivity
                 // and the loader data is no longer available. Called if the data
                 // in the provider changes and the Cursor becomes stale.
                 @Override
-                public void onLoaderReset(Loader<Cursor> loader) {
+                public void onLoaderReset(Loader<Cursor> loader)
+                {
                     // Clear the Cursor we were using with another call to the swapCursor()
                     adapter.swapCursor(null);
                 }
             };
+
+
 }
 
