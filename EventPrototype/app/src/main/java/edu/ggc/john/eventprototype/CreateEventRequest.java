@@ -18,7 +18,7 @@ public class CreateEventRequest
 
     public CreateEventRequest(String name, String username, String password, String email, Response.Listener<String> listener)
     {
-        super(Request.Method.POST, EVENT_REQUEST_URL, listener, null);
+       // super(Request.Method.POST, EVENT_REQUEST_URL, listener, null);
         params = new HashMap<>();
         params.put("name", name);
         params.put("username", username);

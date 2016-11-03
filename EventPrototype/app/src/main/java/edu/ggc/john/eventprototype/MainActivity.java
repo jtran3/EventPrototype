@@ -31,5 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, MyEvents.class));
             }
         });
+
+        Button yourButton3 = (Button) findViewById(R.id.bManageEvents);
+
+        yourButton3.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this, Contacts.class));
+            }
+        });
+
     }
 }
