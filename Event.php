@@ -3,11 +3,11 @@
     
     $event = $_POST["name"];
 	$date = $_POST["date"];
-	$starttime = $_POST["starttime"];
-	$endtime = $_POST["endtime"]
+	$starttimwwe = $_POST["starttime"];
+	$endtime = $_POST["endtime"];
     
-    $statement = mysqli_prepare($con, "INSERT INTO user (name, username, email, password) VALUES(?, ?, ?, ?)");
-    mysqli_stmt_bind_param($statement, "ssss", $name, $username, $email, $password);
+    $statement = mysqli_prepare($con, "INSERT INTO user (name, date, starttime, endtime) VALUES(?, ?, ?, ?)");
+    mysqli_stmt_bind_param($statement, "ssss", $name, $date, $starttime, $endtime);
     mysqli_stmt_execute($statement);
     
     $response = array();
