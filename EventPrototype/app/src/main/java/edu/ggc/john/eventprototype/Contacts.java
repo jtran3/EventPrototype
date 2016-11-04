@@ -13,7 +13,7 @@ import android.widget.ListView;
 public class Contacts extends AppCompatActivity
 {
 
-    private static final int CONTACT_LOADER_ID = 78;
+    public static final int CONTACT_LOADER_ID = 78;
     private SimpleCursorAdapter adapter;
 
 
@@ -58,7 +58,7 @@ public class Contacts extends AppCompatActivity
                     String[] projectionFields = new String[]
                             {ContactsContract.Contacts._ID,
                             ContactsContract.Contacts.DISPLAY_NAME,
-                            ContactsContract.Contacts.PHOTO_URI
+                            ContactsContract.Contacts.HAS_PHONE_NUMBER
                             };
                     // Construct the loader
                     CursorLoader cursorLoader = new CursorLoader(Contacts.this,

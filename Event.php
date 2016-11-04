@@ -3,7 +3,7 @@
     
     $event = $_POST["name"];
 	$date = $_POST["date"];
-	$starttimwwe = $_POST["starttime"];
+	$starttime = $_POST["starttime"];
 	$endtime = $_POST["endtime"];
     
     $statement = mysqli_prepare($con, "INSERT INTO user (name, date, starttime, endtime) VALUES(?, ?, ?, ?)");
