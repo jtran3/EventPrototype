@@ -23,28 +23,52 @@
         android:text="Manage Event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="50dp"
         android:id="@+id/bManageEvents"
         android:layout_below="@+id/button2"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2" />
+=======
+        android:text="Create Event"
+        android:id="@+id/button2"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignRight="@+id/bManageEvents"
+        android:layout_alignEnd="@+id/bManageEvents" />
+>>>>>>> 0bde37131bac3ede6b76a25ee45ea0a9e34038a1
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="My Events"
         android:id="@+id/button3"
         android:layout_marginTop="40dp"
         android:layout_below="@+id/textView2"
         android:layout_alignRight="@+id/textView2"
         android:layout_alignEnd="@+id/textView2" />
+=======
+        android:id="@+id/bManageEvents"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="117dp" />
+>>>>>>> 0bde37131bac3ede6b76a25ee45ea0a9e34038a1
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="Create Event"
         android:id="@+id/button2"
         android:layout_marginTop="44dp"
         android:layout_below="@+id/button3"
         android:layout_centerHorizontal="true" />
+=======
+        android:text="My Events"
+        android:id="@+id/button3"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+>>>>>>> 0bde37131bac3ede6b76a25ee45ea0a9e34038a1
 </RelativeLayout>

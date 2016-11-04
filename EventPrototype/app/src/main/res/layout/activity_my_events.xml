@@ -10,10 +10,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ggc.john.eventprototype.MyEvents">
 
+    <Button
+        android:id="@+id/buttonShowEvent"
+        android:layout_marginTop="25dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Event List"
+        />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
