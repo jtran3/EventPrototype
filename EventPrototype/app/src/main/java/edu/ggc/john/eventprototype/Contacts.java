@@ -9,11 +9,19 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.LoaderManager.LoaderCallbacks;
+import android.widget.AdapterView;
+
 
 public class Contacts extends AppCompatActivity
 {
 
     public static final int CONTACT_LOADER_ID = 78;
+    public static final String DISPLAY_NAME_PRIMARY = "";
+    public static final String DISPLAY_NAME = "";
+    public static final String _ID = "";
+    public static final String LOOKUP_KEY = "";
     private SimpleCursorAdapter adapter;
 
 
@@ -56,7 +64,7 @@ public class Contacts extends AppCompatActivity
                 {
                     // Define the columns to retrieve
                     String[] projectionFields = new String[]
-                            {ContactsContract.Contacts._ID,
+                            {
                             ContactsContract.Contacts.DISPLAY_NAME,
                             ContactsContract.Contacts.HAS_PHONE_NUMBER
                             };
