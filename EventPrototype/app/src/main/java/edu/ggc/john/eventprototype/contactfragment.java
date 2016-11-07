@@ -35,6 +35,11 @@ public class contactfragment extends Fragment implements
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final int[] TO_IDS = {};
+    // The column index for the _ID column
+    private static final int CONTACT_ID_INDEX = 0;
+    // The column index for the LOOKUP_KEY column
+    private static final int LOOKUP_KEY_INDEX = 1;
+    private static final int CONTACT_KEY_INDEX = 0;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -92,6 +97,8 @@ public class contactfragment extends Fragment implements
 
         // Set the item click listener to be the current fragment.
         mContactsList.setOnItemClickListener(this);
+
+
     }
 
     @SuppressLint("InlinedApi")
@@ -108,6 +115,19 @@ public class contactfragment extends Fragment implements
 
         };
     }
+
+    // Defines the text expression
+    @SuppressLint("InlinedApi")
+    private static final String SELECTION =
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ?
+                    Contacts.DISPLAY_NAME_PRIMARY + " LIKE ?" :
+                    Contacts.DISPLAY_NAME + " LIKE ?";
+    // Defines a variable for the search string
+    private String mSearchString;
+    // Defines the array to hold values that replace the ?
+    private String[] mSelectionArgs = { mSearchString };
+
+
 
 
     @Override
@@ -126,8 +146,9 @@ public class contactfragment extends Fragment implements
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+    public void onItemClick(
+            AdapterView<?> parent, View item, int position, long rowID) {
+        
     }
 
     private class OnFragmentInteractionListener
