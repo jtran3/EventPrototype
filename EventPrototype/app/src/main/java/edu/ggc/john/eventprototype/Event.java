@@ -1,5 +1,7 @@
 package edu.ggc.john.eventprototype;
 
+import android.provider.ContactsContract;
+
 import java.util.ArrayList;
 
 /**
@@ -11,7 +13,7 @@ public class Event
     private String eventDate;
     private String startTime;
     private String endTime;
-    private ArrayList<Contacts> guestList;
+    private ArrayList<ContactsContract.Contacts> guestList;
 
     public Event ()
     {
@@ -31,7 +33,7 @@ public class Event
         guestList = null;
     }
 
-    public Event (String eventName, String eventDate, String startTime, String endTime, ArrayList<Contacts>guestList)
+    public Event (String eventName, String eventDate, String startTime, String endTime, ArrayList<ContactsContract.Contacts>guestList)
     {
         eventName = this.eventName;
         eventDate = this.eventDate;
@@ -56,7 +58,7 @@ public class Event
         return endTime;
     }
 
-    public ArrayList<Contacts> getGuestList() {
+    public ArrayList<ContactsContract.Contacts> getGuestList() {
         return guestList;
     }
 
@@ -64,7 +66,7 @@ public class Event
         this.eventName = eventName;
     }
 
-    public void setGuestList(ArrayList<Contacts> guestList) {
+    public void setGuestList(ArrayList<ContactsContract.Contacts> guestList) {
         this.guestList = guestList;
     }
 

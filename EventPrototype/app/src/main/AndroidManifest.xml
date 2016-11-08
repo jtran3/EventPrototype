@@ -71,7 +71,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ManageEvent"/>
-        <activity android:name=".Contacts"/>
         <activity android:name=".MyEvents"/>
         <activity android:name=".Event_List"/>
         <activity android:name=".ShowEventListActivity"></activity>
