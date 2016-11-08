@@ -1,10 +1,13 @@
 package edu.ggc.john.eventprototype;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class CreateEvent2 extends AppCompatActivity {
 
@@ -13,8 +16,15 @@ public class CreateEvent2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event2);
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_event);
+   //     Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,null,null, null);
+  //      while (phones.moveToNext())
+  //      {
+   //         String name=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+  //          String phoneNumber = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+   //         Toast.makeText(getApplicationContext(),name, Toast.LENGTH_LONG).show();
+//
+    //    }
+   //     phones.close();
 
         Button yourButton = (Button) findViewById(R.id.button5);
 

@@ -1,10 +1,11 @@
 package edu.ggc.john.eventprototype;
 
-import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
 
 public class MyEvents extends AppCompatActivity
 {
@@ -15,19 +16,16 @@ public class MyEvents extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_events);
 
-        Button btnShowEvent =(Button)findViewById(R.id.buttonShowEvent);
 
+        ListView listView1 = (ListView) findViewById(R.id.listView1);
 
-        // Set OnClick Listener on  button  and start AnimalListActivity when clicked on Button
-        btnShowEvent.setOnClickListener(new View.OnClickListener() {
+        Event[] events = {
+                new Event("Birthday", "11/8/2016", "8:00am", "8:00pm"),
+        };
 
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
+        ArrayAdapter<Event> adapter = new ArrayAdapter<Event>(this,
+                android.R.layout.simple_list_item_1, events);
 
-                /// Create Intent for AnimalListActivity and Start The Activity
-                Intent intentAnimalList=new Intent(getApplicationContext(),Event_List.class);
-                startActivity(intentAnimalList);
-            }
-        });
+        listView1.setAdapter(adapter);
     }
 }

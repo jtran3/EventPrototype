@@ -42,13 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VerificationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".CreateEvent">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -73,8 +66,6 @@
         <activity android:name=".ManageEvent"/>
         <activity android:name=".Contacts"/>
         <activity android:name=".MyEvents"/>
-        <activity android:name=".Event_List"/>
-        <activity android:name=".ShowEventListActivity"></activity>
     </application>
 
 </manifest>
