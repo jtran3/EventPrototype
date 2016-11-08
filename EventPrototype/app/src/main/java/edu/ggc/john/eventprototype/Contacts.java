@@ -1,6 +1,7 @@
 package edu.ggc.john.eventprototype;
 
 import android.database.Cursor;
+import android.net.Uri;
 import android.provider.ContactsContract;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -101,5 +102,9 @@ public class Contacts extends AppCompatActivity
             };
 
 
+    public static Uri getLookupUri(long mContactId, String mContactKey)
+    {
+        return
+    }
 }
 

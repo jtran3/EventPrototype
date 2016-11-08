@@ -148,7 +148,22 @@ public class contactfragment extends Fragment implements
     @Override
     public void onItemClick(
             AdapterView<?> parent, View item, int position, long rowID) {
-        
+        // Get the Cursor
+        Cursor cursor = parent.getAdapter().getCursor();
+        // Move to the selected contact
+        cursor.moveToPosition(position);
+        // Get the _ID value
+        mContactId = getLong(CONTACT_ID_INDEX);
+        // Get the selected LOOKUP KEY
+        mContactKey = getString(CONTACT_KEY_INDEX);
+        // Create the contact's content Uri
+        mContactUri = Contacts.getLookupUri(mContactId, mContactKey);
+
+    }
+
+    private long getLong(int contactIdIndex)
+    {
+
     }
 
     private class OnFragmentInteractionListener
