@@ -1,6 +1,7 @@
 package edu.ggc.john.eventprototype;
 
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         {
             public void onClick(View v)
             {
-                startActivity(new Intent(MainActivity.this, Contacts.class));
+                startActivity(new Intent(MainActivity.this, ContactsContract.Contacts.class));
             }
         });
 
