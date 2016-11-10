@@ -17,29 +17,25 @@ public class Event
 
     public Event ()
     {
-        eventName = "";
-        eventDate = "";
-        startTime = "";
-        endTime = "";
-        guestList = null;
+        super();
     }
 
     public Event (String eventName, String eventDate, String startTime, String endTime)
     {
-        eventName = this.eventName;
-        eventDate = this.eventDate;
-        startTime = this.startTime;
-        endTime = this.endTime;
+        this.eventName = eventName;
+        this.eventDate = eventDate;
+        this.startTime = startTime;
+        this.endTime = endTime;
         guestList = null;
     }
 
     public Event (String eventName, String eventDate, String startTime, String endTime, ArrayList<ContactsContract.Contacts>guestList)
     {
-        eventName = this.eventName;
-        eventDate = this.eventDate;
-        startTime = this.startTime;
-        endTime = this.endTime;
-        guestList = this.guestList;
+        this.eventName = eventName;
+        this.eventDate = eventDate;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.guestList = guestList;
     }
 
     public String getEventName() {
@@ -80,5 +76,10 @@ public class Event
 
     public void setEventDate(String eventDate) {
         this.eventDate = eventDate;
+    }
+
+    @Override
+    public String toString() {
+        return this.eventName + ". " + this.eventDate;
     }
 }
