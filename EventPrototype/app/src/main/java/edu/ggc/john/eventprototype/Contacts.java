@@ -21,7 +21,12 @@ public class Contacts extends Activity {
     }
 
     @Override
+<<<<<<< HEAD
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+=======
     public boolean onCreateOptionsMenu(Menu menu) {
+>>>>>>> 4d4280221af57cff359b471c607d88ecdc2ac8d9
         //getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
