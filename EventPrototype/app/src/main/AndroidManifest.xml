@@ -70,10 +70,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ManageEvent"/>
-        <activity android:name=".MyEvents"/>
-        <activity android:name=".Event_List"/>
-        <activity android:name=".ShowEventListActivity"></activity>
+        <activity android:name=".ManageEvent" />
+        <activity android:name=".MyEvents" />
+        <activity android:name=".Event_List" />
+        <activity android:name=".ShowEventListActivity" />
+        <activity android:name=".Contacts"></activity>
     </application>
 
 </manifest>
