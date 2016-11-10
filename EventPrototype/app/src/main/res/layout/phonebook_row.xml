@@ -8,7 +8,7 @@
         android:layout_width="70dip"
         android:layout_height="70dip"
         android:scaleType="fitCenter"
-        android:src="@drawable/ic_launcher-web"/>
+        android:src="@drawable/ic_launcher"/>
     />
 
     <LinearLayout android:orientation="vertical"
