@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -51,6 +53,15 @@ public class PhoneBookAdapter extends BaseAdapter
             LayoutInflater inflater = LayoutInflater.from(mContext);
             arg1 = inflater.inflate(R.layout.phonebook_row, null);
         }
-        return null;
+        ImageView ivAvatar = (ImageView)arg1.findViewById(R.id.imgAvatar);
+        ivAvatar.setImageBitmap(entry.getmAvatar());
+
+        TextView tName = (TextView)arg1.findViewById(R.id.tName);
+        tName.setText(entry.getmName());
+
+        TextView tPhone = (TextView)arg1.findViewById(R.id.tPhone);
+        tPhone.setText(entry.getmPhone());
+
+        return arg1;
     }
 }

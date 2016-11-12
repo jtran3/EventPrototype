@@ -3,4 +3,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal">
+
+    <ListView
+        android:id="@+id/listPhone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
 </LinearLayout>
