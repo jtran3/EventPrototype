@@ -1,5 +1,8 @@
 package edu.ggc.john.eventprototype;
 
+import android.content.ContentResolver;
+import android.database.Cursor;
+import android.provider.ContactsContract;
 import android.view.Menu;
 
 /**
@@ -19,7 +22,21 @@ public class Contacts extends Activity {
         //super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
-        ListView Listphone = (ListView)findViewById(R.id.listPhone);
+        ContentResolver resolver = getContentResolver();
+        Cursor cursor = resolver.query(ContactsContract.Contacts.CONTENT_URI,null, null, null, null);
+
+        while (cursor.moveToNext())
+        {
+            String id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
+            String name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+
+            resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
+                    ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?", new String[]{ id }, null);
+            
+
+        }
+
+        //ListView Listphone = (ListView)findViewById(R.id.listPhone);
 
     }
 
