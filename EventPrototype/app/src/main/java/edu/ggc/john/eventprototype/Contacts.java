@@ -3,6 +3,7 @@ package edu.ggc.john.eventprototype;
 import android.content.ContentResolver;
 import android.database.Cursor;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.Menu;
 
 /**
@@ -30,10 +31,24 @@ public class Contacts extends Activity {
             String id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
             String name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
 
-            resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
+           Cursor phoneCursor = resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
                     ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?", new String[]{ id }, null);
-            
 
+            while (phoneCursor.moveToNext())
+            {
+                String phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+
+                Log.i("INFO", phoneNumber);
+            }
+                Cursor emailCursor = resolver.query(ContactsContract.CommonDataKinds.Email.CONTENT_URI, null,
+                        ContactsContract.CommonDataKinds.Email.CONTACT_ID + " = ?", new String[] {id}, null);
+
+            while (emailCursor.moveToNext())
+            {
+                String email = emailCursor.getString(emailCursor.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA));
+
+                Log.i("INFO", email);
+            }
         }
 
         //ListView Listphone = (ListView)findViewById(R.id.listPhone);
