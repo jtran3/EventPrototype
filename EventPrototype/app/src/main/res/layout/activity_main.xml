@@ -20,10 +20,19 @@
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Events"
+        android:id="@+id/button3"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
         android:text="Manage Event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="23dp"
         android:id="@+id/bManageEvents"
         android:layout_below="@+id/button2"
         android:layout_alignLeft="@+id/button2"
@@ -32,19 +41,19 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Events"
-        android:id="@+id/button3"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="Create Event"
         android:id="@+id/button2"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/button3"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bManageEvents"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="35dp"
+        android:id="@+id/bContact" />
 </RelativeLayout>

@@ -23,6 +23,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button bContact = (Button) findViewById(R.id.bContact);
+
+        bContact.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this, Contacts.class));
+            }
+        });
+
         Button yourButton2 = (Button) findViewById(R.id.button3);
 
         yourButton2.setOnClickListener(new View.OnClickListener()
