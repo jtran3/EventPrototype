@@ -18,3 +18,7 @@ looked over https://developer.android.com/reference/android/app/ListFragment.htm
 
 10/28/2016
 created item list xml and list view for contacts to to mess around with and looking into implementing contact when I'm sure it doesn't break the app tomorrow.
+
+11/15/2016
+
+After testing the code out and seeing that it doesn't working, did some more search for examples. Found http://ramsandroid4all.blogspot.com/2014/01/display-all-contacts-from-contacts.html which i'm going to try tomorrow.
