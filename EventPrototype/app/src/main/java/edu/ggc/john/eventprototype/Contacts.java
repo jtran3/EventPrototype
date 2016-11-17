@@ -1,5 +1,6 @@
 package edu.ggc.john.eventprototype;
 
+import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
@@ -11,51 +12,58 @@ import android.view.Menu;
  * Created by Aaron on 11/8/2016.
  */
 
+import java.util.ArrayList;
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
+import android.app.ProgressDialog;
+import android.content.ContentResolver;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
+import android.os.Handler;
+import android.provider.ContactsContract;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
+import android.widget.Toast;
 public class Contacts extends Activity {
+
+    private ListView mListView;
+    private ProgressDialog pDialog;
+    private Handler updateBarHandler;
+    ArrayList<String> contactList;
+    Cursor cursor;
+    int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contacts);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        pDialog = new ProgressDialog(this);
+        pDialog.setMessage("Reading contacts...");
+        pDialog.setCancelable(false);
+        pDialog.show();
+        mListView = (ListView) findViewById(R.id.list);
+        updateBarHandler = new Handler();
 
-        ContentResolver resolver = getContentResolver();
-        Cursor cursor = resolver.query(ContactsContract.Contacts.CONTENT_URI,null, null, null, null);
-
-        while (cursor.moveToNext())
-        {
-            String id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
-            String name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-
-           Cursor phoneCursor = resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
-                    ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?", new String[]{ id }, null);
-
-            while (phoneCursor.moveToNext())
-            {
-                String phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-
-                Log.i("INFO", phoneNumber);
+        // Since reading contacts takes more time, let's run it on a separate thread.
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                getContacts();
             }
-                Cursor emailCursor = resolver.query(ContactsContract.CommonDataKinds.Email.CONTENT_URI, null,
-                        ContactsContract.CommonDataKinds.Email.CONTACT_ID + " = ?", new String[] {id}, null);
-
-            while (emailCursor.moveToNext())
-            {
-                String email = emailCursor.getString(emailCursor.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA));
-
-                Log.i("INFO", email);
+        }).start();
+        // Set onclicklistener to the list item.
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                //TODO Do whatever you want with the list data
+                Toast.makeText(getApplicationContext(), "item clicked : \n"+contactList.get(position), Toast.LENGTH_SHORT).show();
             }
-        }
-
-        //ListView Listphone = (ListView)findViewById(R.id.listPhone);
-
+        });
+    }
     }
 
     @Override
@@ -64,5 +72,9 @@ public class Contacts extends Activity {
     {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    public void getContacts() {
+        return contacts;
     }
 }
