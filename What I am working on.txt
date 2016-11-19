@@ -22,3 +22,7 @@ created item list xml and list view for contacts to to mess around with and look
 11/15/2016
 
 After testing the code out and seeing that it doesn't working, did some more search for examples. Found http://ramsandroid4all.blogspot.com/2014/01/display-all-contacts-from-contacts.html which i'm going to try tomorrow.
+
+11/18/2016
+
+Looking into ways of sending text to selected contacts only. Looking over http://stackoverflow.com/questions/24736994/send-sms-on-selected-contact-in-android and http://www.sachinmuralig.me/2013/11/android-simple-multi-contacts-picker.html for help.
