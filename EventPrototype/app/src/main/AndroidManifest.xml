@@ -63,12 +63,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ManageEvent"/>
-        <activity android:name=".Contacts"/>
-        <activity android:name=".MyEvents"/>
+        <activity android:name=".ManageEvent" />
+        <activity android:name=".Contacts" />
+        <activity android:name=".MyEvents" />
         <activity android:name=".ManageEvent" />
         <activity android:name=".MyEvents" />
-        <activity android:name=".Contacts"></activity>
+        <activity android:name=".Contacts" />
+        <activity android:name=".TextMessage"></activity>
     </application>
 
 </manifest>

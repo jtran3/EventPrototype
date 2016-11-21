@@ -48,9 +48,11 @@ public class Contacts extends Activity {
         updateBarHandler = new Handler();
 
         // Since reading contacts takes more time, let's run it on a separate thread.
-        new Thread(new Runnable() {
+        new Thread(new Runnable()
+        {
             @Override
-            public void run() {
+            public void run()
+            {
                 getContacts();
             }
         }).start();
