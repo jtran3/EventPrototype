@@ -1,10 +1,15 @@
 package edu.ggc.john.eventprototype;
 
+import android.app.Activity;
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -31,9 +36,36 @@ public class TextMessage extends AppCompatActivity {
         ArrayList<PendingIntent> sentPendingIntents = new ArrayList<PendingIntent>();
         ArrayList<PendingIntent> deliveredPendingIntents = new ArrayList<PendingIntent>();
 
-        for (int i = 0; i < smsBodyParts.size(); i++) {
+        for (int i = 0; i < smsBodyParts.size(); i++)
+        {
             sentPendingIntents.add(sentPendingIntent);
             deliveredPendingIntents.add(deliveredPendingIntent);
+
+            // is used when SMS has been sent
+            registerReceiver(new BroadcastReceiver()
+            {
+                @Override
+                public void onReceive(Context context, Intent intent)
+                {
+                    switch (getResultCode()) {
+                        case Activity.RESULT_OK:
+                            Toast.makeText(context, "SMS sent successfully", Toast.LENGTH_SHORT).show();
+                            break;
+                        case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
+                            Toast.makeText(context, "Generic failure cause", Toast.LENGTH_SHORT).show();
+                            break;
+                        case SmsManager.RESULT_ERROR_NO_SERVICE:
+                            Toast.makeText(context, "Service is currently unavailable", Toast.LENGTH_SHORT).show();
+                            break;
+                        case SmsManager.RESULT_ERROR_NULL_PDU:
+                            Toast.makeText(context, "No pdu provided", Toast.LENGTH_SHORT).show();
+                            break;
+                        case SmsManager.RESULT_ERROR_RADIO_OFF:
+                            Toast.makeText(context, "Radio was explicitly turned off", Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                }
+            }, new IntentFilter(SMS_SENT));
         }
     }
 }
