@@ -32,7 +32,7 @@ public class CreateEvent extends AppCompatActivity
         {
             public void onClick(View v)
             {
-                startActivity(new Intent(CreateEvent.this, CreateEvent2.class));
+                startActivity(new Intent(CreateEvent.this, AndroidListViewActivity.class));
             }
         });
 
