@@ -16,15 +16,6 @@ public class CreateEvent2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event2);
 
-   //     Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,null,null, null);
-  //      while (phones.moveToNext())
-  //      {
-   //         String name=phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
-  //          String phoneNumber = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-   //         Toast.makeText(getApplicationContext(),name, Toast.LENGTH_LONG).show();
-//
-    //    }
-   //     phones.close();
 
         Button yourButton = (Button) findViewById(R.id.button5);
 

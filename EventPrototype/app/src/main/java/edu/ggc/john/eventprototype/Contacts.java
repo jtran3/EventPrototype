@@ -45,7 +45,12 @@ public class Contacts extends Activity {
         pDialog.setCancelable(false);
         pDialog.show();
         mListView = (ListView) findViewById(R.id.list);
+<<<<<<< HEAD
 
+=======
+        mListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+        mListView.setItemsCanFocus(false);
+>>>>>>> 144943c303afbe136c78768c4b7fe27ca79039f2
         updateBarHandler = new Handler();
 
         // Since reading contacts takes more time, let's run it on a separate thread.
