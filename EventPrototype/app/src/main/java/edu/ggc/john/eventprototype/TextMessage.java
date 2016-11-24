@@ -47,7 +47,8 @@ public class TextMessage extends AppCompatActivity {
                 @Override
                 public void onReceive(Context context, Intent intent)
                 {
-                    switch (getResultCode()) {
+                    switch (getResultCode())
+                    {
                         case Activity.RESULT_OK:
                             Toast.makeText(context, "SMS sent successfully", Toast.LENGTH_SHORT).show();
                             break;
@@ -66,6 +67,23 @@ public class TextMessage extends AppCompatActivity {
                     }
                 }
             }, new IntentFilter(SMS_SENT));
+            // For when the SMS has been delivered
+            registerReceiver(new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    switch (getResultCode()) {
+                        case Activity.RESULT_OK:
+                            Toast.makeText(getBaseContext(), "SMS delivered", Toast.LENGTH_SHORT).show();
+                            break;
+                        case Activity.RESULT_CANCELED:
+                            Toast.makeText(getBaseContext(), "SMS not delivered", Toast.LENGTH_SHORT).show();
+                            break;
+                    }
+                }
+            }, new IntentFilter(SMS_DELIVERED));
+
+// Send a text based SMS
+            smsManager.sendMultipartTextMessage(phoneNumber, null, smsBodyParts, sentPendingIntents, deliveredPendingIntents);
         }
     }
 }

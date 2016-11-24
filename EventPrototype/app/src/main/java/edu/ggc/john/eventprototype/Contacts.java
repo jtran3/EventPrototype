@@ -45,6 +45,7 @@ public class Contacts extends Activity {
         pDialog.setCancelable(false);
         pDialog.show();
         mListView = (ListView) findViewById(R.id.list);
+
         updateBarHandler = new Handler();
 
         // Since reading contacts takes more time, let's run it on a separate thread.
@@ -133,6 +134,8 @@ public class Contacts extends Activity {
                 public void run() {
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.list_item, R.id.text1, contactList);
                     mListView.setAdapter(adapter);
+                    mListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+                    mListView.setItemsCanFocus(false);
                 }
             });
             // Dismiss the progressbar after 500 millisecondds
