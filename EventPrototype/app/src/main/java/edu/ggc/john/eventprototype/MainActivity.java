@@ -33,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button textTest = (Button) findViewById(R.id.textTest);
+
+        textTest.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this, TextMessage.class));
+            }
+        });
+
         Button yourButton2 = (Button) findViewById(R.id.button3);
 
         yourButton2.setOnClickListener(new View.OnClickListener()

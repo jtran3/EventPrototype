@@ -48,12 +48,21 @@
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bContact"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textTest" />
+
+    <Button
         android:text="Contacts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:id="@+id/bContact"
         android:layout_below="@+id/bManageEvents"
         android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_marginTop="35dp"
-        android:id="@+id/bContact" />
+        android:layout_alignEnd="@+id/textView2" />
 </RelativeLayout>
