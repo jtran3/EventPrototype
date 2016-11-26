@@ -12,7 +12,7 @@ import android.telephony.SmsManager;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
+//redid the code to see if it works.
 public class TextMessage extends AppCompatActivity {
 
     @Override
