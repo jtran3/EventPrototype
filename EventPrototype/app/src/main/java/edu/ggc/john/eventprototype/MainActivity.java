@@ -23,15 +23,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button bContact = (Button) findViewById(R.id.bContact);
-
-        bContact.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                startActivity(new Intent(MainActivity.this, Contacts.class));
-            }
-        });
 
         Button textTest = (Button) findViewById(R.id.textTest);
 
@@ -53,15 +44,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button yourButton3 = (Button) findViewById(R.id.bManageEvents);
-
-        yourButton3.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                startActivity(new Intent(MainActivity.this, ContactsContract.Contacts.class));
-            }
-        });
 
     }
 }

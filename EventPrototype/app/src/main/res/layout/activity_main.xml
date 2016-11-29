@@ -29,16 +29,6 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Manage Event"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:id="@+id/bManageEvents"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Event"
@@ -51,18 +41,9 @@
         android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bContact"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textTest" />
+        android:layout_marginTop="28dp"
+        android:id="@+id/textTest"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="Contacts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:id="@+id/bContact"
-        android:layout_below="@+id/bManageEvents"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
 </RelativeLayout>

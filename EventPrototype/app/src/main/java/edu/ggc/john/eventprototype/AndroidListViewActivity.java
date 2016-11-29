@@ -33,42 +33,16 @@ public class AndroidListViewActivity extends AppCompatActivity {
 
     Button getChoice;
 
-
-    String[] listContent = {
-
-            "January",
-
-            "February",
-
-            "March",
-
-            "April",
-
-            "May",
-
-            "June",
-
-            "July",
-
-            "August",
-
-            "September",
-
-            "October",
-
-            "November",
-
-            "December"
-
-    };
-
     ArrayList<String> contacts = new ArrayList<>();
+    ArrayList<String> phoneNumbers = new ArrayList<>();
+    static ArrayList<String> phoneNumbersSelected = new ArrayList<String>();
     StringBuffer output;
 
     public void addContacts(){
 
         //to store name-number pair
         contacts = new ArrayList<String>();
+        phoneNumbers = new ArrayList<String>();
 
         try {
             Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null, null, null);
@@ -80,6 +54,7 @@ public class AndroidListViewActivity extends AppCompatActivity {
                 output.append(name);
                 output.append("\n" + phoneNumber);
                 contacts.add(output.toString());
+                phoneNumbers.add(phoneNumber);
              //   Log.e("Contact list with name", " "+contacts);
             }
             phones.close();
@@ -136,6 +111,7 @@ public class AndroidListViewActivity extends AppCompatActivity {
                 String selected = "";
 
 
+
                 int cntChoice = myList.getCount();
 
                 SparseBooleanArray sparseBooleanArray = myList.getCheckedItemPositions();
@@ -145,6 +121,10 @@ public class AndroidListViewActivity extends AppCompatActivity {
                     if (sparseBooleanArray.get(i)) {
 
                         selected += myList.getItemAtPosition(i).toString() + "\n";
+                        myList.getItemAtPosition(i);
+                        phoneNumbersSelected.add(phoneNumbers.get(i));
+
+
 
 
                     }
@@ -162,6 +142,10 @@ public class AndroidListViewActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public static ArrayList<String> returnPhoneNumbers() {
+        return phoneNumbersSelected;
     }
 }
 
