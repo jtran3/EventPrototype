@@ -34,3 +34,6 @@ but still nothing on selecting multiple contacts from my list.
 
 11/26/2016
 trying to find an example that can grab reply text and put it into a list, might use http://codetheory.in/android-sms/ i can't find any other examples.
+
+11/29/2016
+Me and Aaron worked on the project starting at 2:16 to 2:20 and worked on it a bit in class. did get sending one text but trying to figure out how to send multiple text on the list.
