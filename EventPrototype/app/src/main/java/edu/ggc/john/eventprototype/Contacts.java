@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.ContactsContract;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -40,6 +41,7 @@ public class Contacts extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
+
         pDialog = new ProgressDialog(this);
         pDialog.setMessage("Reading contacts...");
         pDialog.setCancelable(false);
