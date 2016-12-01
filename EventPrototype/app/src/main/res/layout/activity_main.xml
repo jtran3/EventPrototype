@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,23 +10,22 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ggc.john.eventprototype.MainActivity">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome!"
-        android:id="@+id/textView2"
-        android:layout_marginTop="34dp"
+        app:srcCompat="@drawable/ego"
+        android:id="@+id/imageView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp" />
 
     <Button
+        android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Events"
-        android:id="@+id/button3"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/textView2"
+        android:id="@+id/textTest"
+        android:layout_marginTop="56dp"
+        android:layout_below="@+id/button2"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -33,17 +33,18 @@
         android:layout_height="wrap_content"
         android:text="Create Event"
         android:id="@+id/button2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="57dp"
         android:layout_below="@+id/button3"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:id="@+id/textTest"
-        android:layout_below="@+id/button2"
-        android:layout_centerHorizontal="true" />
+        android:text="My Events"
+        android:id="@+id/button3"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView" />
 
 </RelativeLayout>
